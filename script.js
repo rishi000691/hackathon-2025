@@ -1,3 +1,24 @@
+// Login Logic
+document.getElementById('loginForm')?.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const username = document.getElementById('username').value;
+    const password = document.getElementById('password').value;
+    const loginMessage = document.getElementById('loginMessage');
+
+    // Simple hardcoded login (for demo purposes)
+    if (username === 'user' && password === 'pass') {
+        loginMessage.textContent = 'Login successful! Redirecting...';
+        loginMessage.style.color = '#2ecc71';
+        setTimeout(() => {
+            window.location.href = 'index.html';
+        }, 1000);
+    } else {
+        loginMessage.textContent = 'Invalid username or password.';
+        loginMessage.style.color = '#e74c3c';
+    }
+});
+
+// Checklist Logic
 let items = [];
 
 function addItem() {
