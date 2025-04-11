@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PackPal - Group Packing Organizer</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-suitcase"></i> PackPal</h1>
+            <p>Organize your group packing with ease!</p>
+        </header>
+        <div class="checklist-section">
+            <h2><i class="fas fa-list-check"></i> Packing List</h2>
+            <div class="controls">
+                <select id="category">
+                    <option value="Hygiene">Hygiene</option>
+                    <option value="Tech">Tech</option>
+                    <option value="Clothing">Clothing</option>
+                    <option value="Other">Other</option>
+                </select>
+                <input type="text" id="item-name" placeholder="Add item...">
+                <input type="text" id="assigned-to" placeholder="Assign to...">
+                <button onclick="addItem()"><i class="fas fa-plus"></i> Add Item</button>
+                <button onclick="exportToPDF()"><i class="fas fa-file-download"></i> Export to PDF</button>
+            </div>
+            <div class="progress">
+                <span id="progress-text">Progress: 0/0 (0%)</span>
+                <div class="progress-bar">
+                    <div id="progress-fill"></div>
+                </div>
+            </div>
+            <div id="checklist"></div>
+        </div>
+        <!-- New Features Section -->
+        <div class="features-section">
+            <h2>Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <h3>Status Tracker</h3>
+                    <p class="price">$75</p>
+                    <button onclick="alert('View Status Tracker course!')">View Course</button>
+                </div>
+                <div class="feature-card">
+                    <h3>Packing Planner</h3>
+                    <p class="price">$50</p>
+                    <button onclick="alert('Book Packing Planner now!')">Book Now</button>
+                </div>
+                <div class="feature-card">
+                    <h3>PDF Export</h3>
+                    <p class="price">$30</p>
+                    <button onclick="alert('Book PDF Export now!')">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
