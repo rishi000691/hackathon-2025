@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to PackPal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            /* Set the provided image as the background */
+            background: url('https://via.placeholder.com/1200x800.png?text=DisneyCastleBackground') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.9); /* Semi-transparent white for readability */
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            max-width: 600px;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .logo {
+            width: 120px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 1.1em;
+            color: #666;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+
+        .login-btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: #ff6f61;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            border-radius: 25px;
+            transition: background 0.3s ease, transform 0.2s ease;
+        }
+
+        .login-btn:hover {
+            background: #e55a4f;
+            transform: translateY(-3px);
+        }
+
+        .signup-link {
+            margin-top: 20px;
+            font-size: 1em;
+            color: #666;
+        }
+
+        .signup-link a {
+            color: #ff6f61;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .signup-link a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 20px;
+                margin: 20px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .login-btn {
+                padding: 12px 30px;
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Placeholder logo; replace with actual PackPal logo -->
+        <img src="https://via.placeholder.com/120x120.png?text=PackPal" alt="PackPal Logo" class="logo">
+        <h1>Welcome to PackPal</h1>
+        <p>Plan your magical trip with ease! PackPal helps you organize everything for your Disney adventure.</p>
+        <a href="/login" class="login-btn">Log In</a>
+        <div class="signup-link">
+            New to PackPal? <a href="/signup">Sign up here</a>
+        </div>
+    </div>
+</body>
+</html>
