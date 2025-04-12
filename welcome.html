@@ -18,14 +18,15 @@
             align-items: center;
             min-height: 100vh;
             /* Set the provided image as the background */
-            background: url('https://via.placeholder.com/1200x800.png?text=DisneyCastleBackground') no-repeat center center fixed;
+            /* background: url('welcome.jpg') no-repeat center center fixed; */
             background-size: cover;
             color: #fff;
         }
 
         .container {
-            background: rgba(255, 255, 255, 0.9); /* Semi-transparent white for readability */
+            background: rgba(255, 255, 255, 0.2); /* Semi-transparent white for readability */
             border-radius: 15px;
+            background: url('Untitled design.png') no-repeat center center fixed;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
             max-width: 600px;
             padding: 40px;
@@ -35,19 +36,33 @@
         .logo {
             width: 120px;
             margin-bottom: 20px;
+            display: flex;
+            height: 50px;;
+            position: relative;
+            right: 60px;
+            bottom: 30px;
         }
 
+       
         h1 {
-            font-size: 2.5em;
-            color: #333;
-            margin-bottom: 15px;
-        }
+    font-size: 2.5em;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+}
 
         p {
             font-size: 1.1em;
-            color: #666;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
             margin-bottom: 30px;
             line-height: 1.5;
+            font-weight: 700;
+            /* background-color: #35d0d072;
+            border: 2px;
+            border-radius: 30px;
+            padding: 20px; */
+            
+        
         }
 
         .login-btn {
@@ -70,14 +85,27 @@
         .signup-link {
             margin-top: 20px;
             font-size: 1em;
-            color: #666;
+            color: #ff1e00;
+            display: flex;
+            justify-content: center;
         }
+        .new{
+            margin: 10px;
+            color: aqua;
+            text-shadow: 2px 2px 5px black;
+        }
+        
 
         .signup-link a {
             color: #ff6f61;
+            background-color: rgba(240, 255, 255, 0.694);
+            border: 2px;
+            border-radius:30px ;
+            padding: 5px;
+            /* box-shadow:  2px 2px 5px rgba(0, 0, 0, 0.3); */
             text-decoration: none;
             font-weight: bold;
-        }
+           padding: 10px;        }
 
         .signup-link a:hover {
             text-decoration: underline;
@@ -102,13 +130,13 @@
 </head>
 <body>
     <div class="container">
-        <!-- Placeholder logo; replace with actual PackPal logo -->
-        <img src="https://via.placeholder.com/120x120.png?text=PackPal" alt="PackPal Logo" class="logo">
+        <!-- Replace with the generated PackPal logo -->
+        <img src="backpacksvg.svg" alt="PackPal Logo" class="logo" >
         <h1>Welcome to PackPal</h1>
         <p>Plan your magical trip with ease! PackPal helps you organize everything for your Disney adventure.</p>
-        <a href="/login" class="login-btn">Log In</a>
+        <a href="/login.html" class="login-btn">Log In </a>
         <div class="signup-link">
-            New to PackPal? <a href="/signup">Sign up here</a>
+            <div class="new">New to PackPal? </div><a href="/signup">Sign up here</a>
         </div>
     </div>
 </body>
