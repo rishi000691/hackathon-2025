@@ -1,3 +1,51 @@
+// User Storage (using localStorage for demo purposes)
+function saveUser(username, password) {
+    let users = JSON.parse(localStorage.getItem('packpal-users')) || {};
+    if (users[username]) {
+        return false; // User already exists
+    }
+    users[username] = password;
+    localStorage.setItem('packpal-users', JSON.stringify(users));
+    return true;
+}
+
+function checkUser(username, password) {
+    let users = JSON.parse(localStorage.getItem('packpal-users')) || {};
+    return users[username] === password;
+}
+
+// Signup Logic
+document.getElementById('signupForm')?.addEventListener('submit', function(e) {
+    e.preventDefault();
+    const username = document.getElementById('signup-username').value;
+    const password = document.getElementById('signup-password').value;
+    const confirmPassword = document.getElementById('confirm-password').value;
+    const signupMessage = document.getElementById('signupMessage');
+
+    if (!username || !password || !confirmPassword) {
+        signupMessage.textContent = 'Please fill in all fields.';
+        signupMessage.style.color = '#e74c3c';
+        return;
+    }
+
+    if (password !== confirmPassword) {
+        signupMessage.textContent = 'Passwords do not match.';
+        signupMessage.style.color = '#e74c3c';
+        return;
+    }
+
+    if (saveUser(username, password)) {
+        signupMessage.textContent = 'Sign up successful! Redirecting to login...';
+        signupMessage.style.color = '#2ecc71';
+        setTimeout(() => {
+            window.location.href = '/login.html';
+        }, 1000);
+    } else {
+        signupMessage.textContent = 'Username already exists.';
+        signupMessage.style.color = '#e74c3c';
+    }
+});
+
 // Login Logic
 document.getElementById('loginForm')?.addEventListener('submit', function(e) {
     e.preventDefault();
@@ -5,12 +53,11 @@ document.getElementById('loginForm')?.addEventListener('submit', function(e) {
     const password = document.getElementById('password').value;
     const loginMessage = document.getElementById('loginMessage');
 
-    // Simple hardcoded login (for demo purposes)
-    if (username === 'user' && password === 'pass') {
+    if (checkUser(username, password)) {
         loginMessage.textContent = 'Login successful! Redirecting...';
         loginMessage.style.color = '#2ecc71';
         setTimeout(() => {
-            window.location.href = 'index.html';
+            window.location.href = '/index.html';
         }, 1000);
     } else {
         loginMessage.textContent = 'Invalid username or password.';
