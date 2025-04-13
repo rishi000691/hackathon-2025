@@ -8,12 +8,40 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-
+    
     <div class="container">
         <header>
+            <div class="nav">
+                <ul>
+                    <img src="airplanesvg.svg" alt="airplane">
+                    <li>Home</li>
+                    <li>Profile</li>
+                    <li>Contact Us</li>
+                </ul>
+            </div>
             <h1><i class="fas fa-suitcase"></i> PackPal</h1>
             <p>Organize your group packing with ease!</p>
         </header>
+        <div class="why-choose-section">
+            <h2>Why Choose PackPal?</h2>
+            <div class="why-choose-grid">
+                <div class="why-choose-card">
+                    <i class="fas fa-suitcase-rolling"></i>
+                    <h3>Smart Packing</h3>
+                    <p>Create group checklists to ensure everyone brings what's needed.</p>
+                </div>
+                <div class="why-choose-card">
+                    <i class="far fa-calendar-alt"></i>
+                    <h3>Itinerary Planning</h3>
+                    <p>Schedule your Disney park days with ease and stay organized.</p>
+                </div>
+                <div class="why-choose-card">
+                    <i class="fas fa-users"></i>
+                    <h3>Group Collaboration</h3>
+                    <p>Work together with friends or family for a seamless trip.</p>
+                </div>
+            </div>
+        </div>
         <div class="checklist-section">
             <h2><i class="fas fa-list-check"></i> Packing List</h2>
             <div class="controls">
@@ -36,27 +64,6 @@
             </div>
             <div id="checklist"></div>
         </div>
-        <div class="features-section">
-            <h2>Features</h2>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <h3>Status Tracker</h3>
-                    <p class="price">$75</p>
-                    <button onclick="alert('View Status Tracker course!')">View Course</button>
-                </div>
-                <div class="feature-card">
-                    <h3>Packing Planner</h3>
-                    <p class="price">$50</p>
-                    <button onclick="alert('Book Packing Planner now!')">Book Now</button>
-                </div>
-                <div class="feature-card">
-                    <h3>PDF Export</h3>
-                    <p class="price">$30</p>
-                    <button onclick="alert('Book PDF Export now!')">Book Now</button>
-                </div>
-            </div>
-        </div>
-    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="script.js"></script>

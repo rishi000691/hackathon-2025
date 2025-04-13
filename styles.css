@@ -81,14 +81,14 @@
 
 /* Main App Styles */
 body {
-    background-color: #f4f4f9;
+    background-color: #c6aad985;;
 }
 
 .container {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    background: white;
+    background: #154c79;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     animation: fadeIn 0.5s ease-in;
@@ -105,7 +105,8 @@ header {
 }
 
 header h1 {
-    color: #2c3e50;
+    margin-top: 15px;
+    color:var(--hovercolor);
     font-size: 28px;
     display: flex;
     align-items: center;
@@ -119,7 +120,7 @@ header p {
 }
 
 .checklist-section h2 {
-    color: #34495e;
+    color: #ffffff;
     margin-bottom: 15px;
     display: flex;
     align-items: center;
@@ -188,13 +189,14 @@ header p {
 #progress-text {
     display: block;
     margin-bottom: 8px;
-    color: #34495e;
+    color: #ffffff;
     font-weight: bold;
 }
 
 .item {
     display: flex;
     align-items: center;
+    color: white;
     padding: 12px;
     border-bottom: 1px solid #eee;
     animation: slideIn 0.3s ease;
@@ -203,6 +205,9 @@ header p {
 
 .item:hover {
     background-color: #f9f9f9;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    border-radius: 35px;
 }
 
 @keyframes slideIn {
@@ -332,3 +337,95 @@ header p {
         width: 80%;
     }
 }
+.why-choose-section {
+    margin: 20px 0;
+    padding: 20px;
+    background: #c58055;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.why-choose-section h2 {
+    color: #000000;
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    opacity: 0.8;
+    text-shadow: none; /* Remove shadow for flat look like the image */
+}
+
+.why-choose-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    justify-content: center;
+}
+
+.why-choose-card {
+    background: #f5f5dc;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.why-choose-card:hover {
+    transform: translateY(-5px);
+}
+
+.why-choose-card i {
+    font-size: 2em;
+    color: #ff6f61; /* Matches your button color for consistency */
+    margin-bottom: 10px;
+}
+
+.why-choose-card h3 {
+    font-size: 1.2em;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.why-choose-card p {
+    font-size: 0.9em;
+    color: #34495e;
+    line-height: 1.4;
+}
+:root{
+    --hovercolor: orange;
+    --bgcolor:white;
+    --fontcolor:black;
+}
+    .nav ul{
+        background: #f5f5dc;
+        color:var(--fontcolor);
+        display: flex;
+        list-style: none;
+        justify-content: end;
+        border-radius: 15px;
+        padding: 2px 0px;
+    }
+    ul li{
+        padding: 2px 12px;
+        max-width: 0px 10px;
+        border: 2px solid #f5f5dc;;
+        border-radius: 25px;
+        margin: 2px 14px;
+        color:var(--hovercolor);
+        border: 2px solid var(--fontcolor);
+        border-radius: 25px;
+        box-shadow: 0px 0px 10px var(--fontcolor);
+        background-color: black;
+    }
+    .nav ul li:hover{
+        color:var(--hovercolor);
+        border: 2px solid white;
+        border-radius: 25px;
+        box-shadow: 0px 0px 10px white;
+        background-color: black;
+    }
+    ul :first-child{
+        height: 30px;
+        margin-right: 375px;
+        
+    }
+    
